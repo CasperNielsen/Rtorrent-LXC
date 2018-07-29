@@ -7,7 +7,7 @@ RUN useradd -m -s /bin/bash rtorrent && echo rtorrent:new_password | chpasswd
 RUN apt-get update && apt-get -y install openssl git apache2 apache2-utils build-essential libsigc++-2.0-dev \
 	libcurl4-openssl-dev automake libtool libcppunit-dev libncurses5-dev libapache2-mod-scgi \
 	php7.0 libapache2-mod-php7.0 php7.0-opcache php7.0-curl php7.0-gd php7.0-mcrypt php7.0-xmlrpc php7.0-json \
-	tmux unzip libssl-dev curl debconf dialog apt-utils zlib1g-dev zlibc zlib1g
+	tmux unzip libssl-dev curl debconf dialog apt-utils zlib1g-dev zlibc zlib1g build-essential cmake libjpeg-dev libpng-dev
 
 # Compile xmlrpc-c
 RUN cd /tmp \
@@ -22,7 +22,7 @@ RUN cd /tmp \
 
 # Compile libtorrent
 RUN cd /tmp \
-	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.7.tar.gz -o libtorrent.tar.gz \
+	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.6.tar.gz -o libtorrent.tar.gz \
 	&& tar -zxvf libtorrent.tar.gz \
 	&& cd libtorrent-0.13.7 \
 	&& ./autogen.sh \
