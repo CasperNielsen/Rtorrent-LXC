@@ -24,7 +24,7 @@ RUN cd /tmp \
 RUN cd /tmp \
 	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.6.tar.gz -o libtorrent.tar.gz \
 	&& tar -zxvf libtorrent.tar.gz \
-	&& cd libtorrent-0.13.7 \
+	&& cd libtorrent-0.13.6 \
 	&& ./autogen.sh \
 	&& ./configure \
 	&& make \
