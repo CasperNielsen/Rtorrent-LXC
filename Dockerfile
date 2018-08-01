@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:jessie
 
 # Create user rtorrent
 RUN useradd -m -s /bin/bash rtorrent && echo rtorrent:new_password | chpasswd
@@ -6,12 +6,11 @@ RUN useradd -m -s /bin/bash rtorrent && echo rtorrent:new_password | chpasswd
 # Install all dependencies
 RUN apt-get update && apt-get -y install openssl git apache2 apache2-utils build-essential libsigc++-2.0-dev \
 	libcurl4-openssl-dev automake libtool libcppunit-dev libncurses5-dev libapache2-mod-scgi \
-	php7.0 libapache2-mod-php7.0 php7.0-opcache php7.0-curl php7.0-gd php7.0-mcrypt php7.0-xmlrpc php7.0-json \
-	tmux unzip libssl-dev curl debconf dialog apt-utils zlib1g-dev zlibc zlib1g build-essential cmake libjpeg-dev libpng-dev
+	php5 php5-curl php5-cli libapache2-mod-php5 tmux unzip libssl-dev curl
 
 # Compile xmlrpc-c
 RUN cd /tmp \
-	&& curl -L http://sourceforge.net/projects/xmlrpc-c/files/Xmlrpc-c%20Super%20Stable/1.39.13/xmlrpc-c-1.39.13.tgz/download -o xmlrpc-c.tgz \
+	&& curl -L http://sourceforge.net/projects/xmlrpc-c/files/Xmlrpc-c%20Super%20Stable/1.33.18/xmlrpc-c-1.39.13.tgz/download -o xmlrpc-c.tgz \
 	&& tar zxvf xmlrpc-c.tgz \
 	&& mv xmlrpc-c-1.* xmlrpc \
 	&& cd xmlrpc \
@@ -22,9 +21,9 @@ RUN cd /tmp \
 
 # Compile libtorrent
 RUN cd /tmp \
-	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.6.tar.gz -o libtorrent.tar.gz \
+	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.7.tar.gz -o libtorrent.tar.gz \
 	&& tar -zxvf libtorrent.tar.gz \
-	&& cd libtorrent-0.13.6 \
+	&& cd libtorrent-0.13.7 \
 	&& ./autogen.sh \
 	&& ./configure \
 	&& make \
