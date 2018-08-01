@@ -10,7 +10,7 @@ RUN apt-get update && apt-get -y install openssl git apache2 apache2-utils build
 
 # Compile xmlrpc-c
 RUN cd /tmp \
-	&& curl -L http://sourceforge.net/projects/xmlrpc-c/files/Xmlrpc-c%20Super%20Stable/1.33.18/xmlrpc-c-1.39.13.tgz/download -o xmlrpc-c.tgz \
+	&& curl -L https://sourceforge.net/projects/xmlrpc-c/files/Xmlrpc-c%20Super%20Stable/1.39.13/xmlrpc-c-1.39.13.tgz/download -o xmlrpc-c.tgz \
 	&& tar zxvf xmlrpc-c.tgz \
 	&& mv xmlrpc-c-1.* xmlrpc \
 	&& cd xmlrpc \
