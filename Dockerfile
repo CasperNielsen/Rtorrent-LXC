@@ -48,8 +48,10 @@ RUN cd /tmp \
 
 # Install Rutorrent
 RUN cd /tmp \
+	&& curl -L https://github.com/Novik/ruTorrent/archive/v3.8.tar.gz -o v3.8.tar.gz \
+	&& tar -zxvf v3.8.tar.gz \
 	&& rm -f /var/www/html/index.html \
-	&& git clone https://github.com/Novik/ruTorrent.git /var/www/html/ \
+	&& mv -f ruTorrent-3.8/* /var/www/html/ \
 	&& chown -R www-data.www-data /var/www/html/* \
 	&& chmod -R 775 /var/www/html/*
 
