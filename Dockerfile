@@ -23,7 +23,7 @@ RUN cd /tmp \
 RUN cd /tmp \
 	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.6.tar.gz -o libtorrent.tar.gz \
 	&& tar -zxvf libtorrent.tar.gz \
-	&& cd libtorrent-0.13.7 \
+	&& cd libtorrent-0.13.6 \
 	&& ./autogen.sh \
 	&& ./configure \
 	&& make \
@@ -34,7 +34,7 @@ RUN cd /tmp \
 RUN cd /tmp \
 	&& curl -L http://rtorrent.net/downloads/rtorrent-0.9.6.tar.gz -o rtorrent.tar.gz \
 	&& tar -zxvf rtorrent.tar.gz \
-	&& cd rtorrent-0.9.7 \
+	&& cd rtorrent-0.9.6 \
 	&& ./autogen.sh \
 	&& ./configure --with-xmlrpc-c \
 	&& make \
