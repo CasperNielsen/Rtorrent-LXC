@@ -21,7 +21,7 @@ RUN cd /tmp \
 
 # Compile libtorrent
 RUN cd /tmp \
-	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.7.tar.gz -o libtorrent.tar.gz \
+	&& curl -L http://rtorrent.net/downloads/libtorrent-0.13.6.tar.gz -o libtorrent.tar.gz \
 	&& tar -zxvf libtorrent.tar.gz \
 	&& cd libtorrent-0.13.7 \
 	&& ./autogen.sh \
@@ -32,7 +32,7 @@ RUN cd /tmp \
 
 # Compile rtorrent
 RUN cd /tmp \
-	&& curl -L http://rtorrent.net/downloads/rtorrent-0.9.7.tar.gz -o rtorrent.tar.gz \
+	&& curl -L http://rtorrent.net/downloads/rtorrent-0.9.6.tar.gz -o rtorrent.tar.gz \
 	&& tar -zxvf rtorrent.tar.gz \
 	&& cd rtorrent-0.9.7 \
 	&& ./autogen.sh \
