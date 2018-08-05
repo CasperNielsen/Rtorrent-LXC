@@ -10,7 +10,6 @@
 
  theUILang.autotools			= "Автоматизация";
  theUILang.autotoolsEnableLabel 	= "Включить функцию \"АвтоМетки\", Шаблон:";
- theUILang.autotoolsEnableMove		= "Включить функцию \"АвтоПеремещение\"";
  theUILang.autotoolsPathToFinished	= "Каталог для завершенных закачек";
  theUILang.autotoolsEnableWatch 	= "Включить функцию \"АвтоДобавление\"";
  theUILang.autotoolsPathToWatch 	= "Каталог для поиска новых торрентов";
@@ -22,5 +21,9 @@
  theUILang.autotoolsFileOpHardLink 	= "Жесткая ссылка";
  theUILang.autotoolsFileOpCopy		= "Скопировать";
  theUILang.autotoolsFileOpSoftLink	= "Мягкая ссылка";
+ theUILang.autotoolsAddLabel		= "Добавлять к пути метку торрента";
+ theUILang.autotoolsAddName		= "Добавлять к пути имя торрента";
+ theUILang.autotoolsEnableMove		= "Включить \"АвтоПеремещение\", если метка торрента соответствует";
+ theUILang.autotoolsSkipMoveForFiles	= "Пропускать торренты, которые содержат файлы, совпадающие с шаблоном";
 
 thePlugins.get("autotools").langLoaded();

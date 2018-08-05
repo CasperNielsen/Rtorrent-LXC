@@ -10,7 +10,6 @@
 
  theUILang.autotools			= "Autotools";
  theUILang.autotoolsEnableLabel 	= "Enable \"AutoLabel\" feature, Template:";
- theUILang.autotoolsEnableMove  	= "Enable \"AutoMove\" feature";
  theUILang.autotoolsPathToFinished	= "Path to finished downloads";
  theUILang.autotoolsEnableWatch 	= "Enable \"AutoWatch\" feature";
  theUILang.autotoolsPathToWatch 	= "Path to base watch directory";
@@ -22,5 +21,9 @@
  theUILang.autotoolsFileOpHardLink 	= "Hard link";
  theUILang.autotoolsFileOpCopy		= "Copy";
  theUILang.autotoolsFileOpSoftLink	= "Soft link";
+ theUILang.autotoolsAddLabel		= "Add torrent's label to path";
+ theUILang.autotoolsAddName		= "Add torrent's name to path";
+ theUILang.autotoolsEnableMove  	= "Enable \"AutoMove\" if torrent's label matches filter";
+ theUILang.autotoolsSkipMoveForFiles	= "Skip torrents that contain files matching pattern";
 
 thePlugins.get("autotools").langLoaded();

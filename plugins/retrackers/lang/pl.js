@@ -7,9 +7,9 @@
  */
 
  theUILang.retrackers		= "Retrackers";
- theUILang.retrackersAdd	= "Add Announces";
- theUILang.retrackersDel	= "Remove Announces";
- theUILang.dontAddToPrivate	= "Don't touch private torrents";
- theUILang.addToBegin		= "Add announces to the beginning of the trackers list";
+ theUILang.retrackersAdd	= "Dodaj adresy trackerów";
+ theUILang.retrackersDel	= "Usuń adresy trackerów";
+ theUILang.dontAddToPrivate	= "Nie modyfikuj prywatnych torrentów";
+ theUILang.addToBegin		= "Dodaj adresy na początku listy";
 
 thePlugins.get("retrackers").langLoaded();
