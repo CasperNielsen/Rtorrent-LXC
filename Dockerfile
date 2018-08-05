@@ -52,7 +52,7 @@ RUN cd /tmp \
 	&& tar -zxvf master.tar.gz \
 	&& rm -f /var/www/html/index.html \
 	&& mv -f ruTorrent-master/* /var/www/html/ \
-	&& rm -f /var/www/html/plugins/* \
+	&& rm -rf /var/www/html/plugins/* \
 	&& chown -R www-data.www-data /var/www/html/* \
 	&& chmod -R 775 /var/www/html/*
 
